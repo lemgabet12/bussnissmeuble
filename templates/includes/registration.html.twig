@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{ include('includes/sliders.html.twig') }}
+
+
+{% for flashError in app.flashes('verify_email_error') %}
+	<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+{% endfor %}
+<section class="sptb-sm" style="padding-top: 0.1rem;">
+	<div class="container customerpage">
+		<div class="row">
+			<div class="single-page">
+				<div class="col-lg-0 col-xl-4 col-md-4 d-block mx-auto">
+					<div class="wrapper wrapper2 card-body">
+						<h3 class="font-weight-semibold2">inscription</h3>
+						{{ form_start(registrationForm) }}
+
+
+						<div class="mail">
+						
+							{{ form_row(registrationForm.email) }}
+						</div>
+						<div class="mail">
+							
+							{{ form_row(registrationForm.name) }}
+						</div>
+
+						<div class="passwd">
+						
+							{{ form_row(registrationForm.plainPassword) }}
+						</div>
+
+						<button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Register</button>
+						{{ form_end(registrationForm) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section {% endblock %}

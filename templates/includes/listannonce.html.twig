@@ -1,0 +1,222 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+	{{ include('includes/sliders.html.twig') }}
+	<section class="sptb-sm" style="padding-top: 0.1rem;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-3 col-lg-12 col-md-12">
+					<div class="card overflow-hidden">
+						<div class="card-header">
+							<h3 class="card-title">Mon Compte
+							</h3>
+						</div>
+						<div class="card-body item-user p-5">
+							<div class="img-absolute-top2 img-absolute-top3"><img src="../assets/images/banners/bg6.png" alt="img"></div>
+							<div class="profile-pic text-center reative">
+								<div class="profile-pic-img text-center">
+									<span class="bg-success dots" data-bs-toggle="tooltip" data-bs-placement="top" title="online"></span>
+									<img src="{{asset('../assets/images/brand/profil.jpg')}}" class="br-7 w-100" alt="user">
+								</div>
+								<a href="{{asset('../assets/images/brand/profil.jpg')}}" class="text-dark">
+									<h4 class="mt-4 mb-0 font-weight-semibold2 fs-16">{{app.user.name}}
+										<span class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Verified Owner">
+											<i class="fe fe-check-circle text-success fs-13"></i>
+										</span>
+									</h4>
+								</a>
+								<p class="mb-0 mt-1 text-muted">Propriétaire</p>
+							</div>
+						</div>
+						<aside class="app-sidebar doc-sidebar my-dash">
+							<div class="app-sidebar__user clearfix">
+								<ul class="side-menu">
+									<li>
+										<a class="side-menu__item" href="mydash.html">
+											<i class="side-menu__icon fe fe-user"></i>
+											<span class="side-menu__label">Modifier le profil</span>
+										</a>
+									</li>
+									<li>
+										<a class="side-menu__item" href="{{path ('list',{ id : app.user.id} )}}">
+											<i class="side-menu__icon fe fe-list"></i>
+											<span class="side-menu__label">Mes annonces
+											</span>
+										</a>
+									</li>
+
+
+									<li>
+										<a class="side-menu__item" href="login.html">
+											<i class="side-menu__icon fe fe-power"></i>
+											<span class="side-menu__label">Se déconnecter
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+					<div class="card my-select">
+						<div class="card-header">
+							<h3 class="card-title">Rechercher une annonces</h3>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<input type="text" class="form-control" id="text" placeholder="Rechercher">
+							</div>
+							<div class="form-group select2-radius-single">
+								<select name="country" id="select-countries" class="form-control form-select select2-show-search">
+									<option>Catégories</option>
+									<option value="1">MEUBLES SALON</option>
+									<option value="3">MEUBLE DE CHAMBRE</option>
+									<option value="4">CUISINE & SALLE DE BAIN</option>
+									<option value="5">MEUBLES JARDIN
+									</option>
+
+								</select>
+							</div>
+							<div class="">
+								<a href="javascript:void(0);" class="btn btn-primary btn-block waves-effect waves-light">Rechercher
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-xl-9 col-lg-12 col-md-12">
+					<div class="card mb-0">
+						<div class="card-header">
+							<h3 class="card-title">MES ANNONCES</h3>
+						</div>
+						<div class="card-body">
+							<div class="ads-tabs">
+								<div
+									class="tabs-menus">
+									<!-- Tabs -->
+									<ul class="nav panel-tabs">
+										<li class="">
+											<a href="#tab1" class="active" data-bs-toggle="tab">Tout les annonces</a>
+										</li>
+										<li>
+											<a href="#tab2" data-bs-toggle="tab">Publié
+											</a>
+										</li>
+
+										<li>
+											<a href="#tab4" data-bs-toggle="tab">Soldé
+											</a>
+										</li>
+										<li>
+											<a href="#tab5" data-bs-toggle="tab">Nouveautés</a>
+										</li>
+										<li>
+											<a href="#tab6" data-bs-toggle="tab">Expiré
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tab-content">
+									<div class="tab-pane active userprof-tab" id="tab1">
+										{% if annonces %}
+											<table class=" table table-responsive table-bordered table-hover mb-0 text-nowrap">
+												<thead>
+													<tr>
+														<th>Annonce</th>
+														<th>Catégories</th>
+														<th>ville</th>
+														<th>Prix</th>
+														<th>etatannonce</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													{% for annonce in annonces %}
+														<tr>
+
+
+															<td>
+																<div class="media mt-0 mb-0">
+																	<div class="card-aside-img">
+																		<a href="#"></a>
+																		<img src="{{asset('uploads/images/products/'~annonce.couverture)}}" alt="img" class="br-4">
+																	</div>
+																	<div class="media-body">
+																		<div class="card-item-desc ms-4 p-0 mt-2">
+																			<a href="#" class="text-dark">
+																				<h4 class="font-weight-semibold2">{{annonce.title}}</h4>
+																			</a>
+																			<a href="#" class="fs-13 text-muted">
+																				<i class="fe fe-clock me-1"></i>
+																				{{annonce.datecreation | date('d-m-Y')}}</a><br>
+																			<a href="#" class="fs-13 text-muted">
+																				<i class="fe fe-tag me-1"></i>
+																				{{annonce.categorieId.nom}}</a>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td>{{annonce.categorieId.nom}}</td>
+															<td>{{annonce.villeId.nom}}</td>
+															<td class="font-weight-semibold fs-16">{{annonce.prix}}
+																DT</td>
+															{% if annonce.etatannonce == "Publique"  %}
+   <td class="greencolor"> {{annonce.etatannonce}}</td>
+{% else %}
+    <td class="redcolor"> {{annonce.etatannonce}}</td>
+{% endif %}
+
+															<td>
+																<a href="/annonce/edit/{{annonce.id}}" class="btn btn-light btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-original-title="modifier">
+																	<i class="fe fe-edit-2 fs-16"></i>
+																</a>
+																<a href="/annonce/delete/{{ annonce.id }}" class="btn btn-light btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-original-title="supprimer">
+																	<i class="fe fe-trash fs-16"></i>
+																</a>
+																<a href="/annonce/{{annonce.id}} " class="btn btn-light btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-original-title="Voir">
+																	<i class="fe fe-eye fs-16"></i>
+																</a>
+															</td>
+														</tr>
+
+
+													</div>
+												{% endfor %}
+											</tbody>
+										</table>
+
+									{% else %}
+										<p>
+											Aucun annonces</p>
+									{% endif %}
+								</div>
+
+
+								&nbsp;
+								<div class="center-block text-center">
+									<ul class="pagination mb-5 mb-lg-0">
+										<li class="page-item page-prev disabled">
+											<a class="page-link" href="javascript:void(0);" tabindex="-1">Avant</a>
+										</li>
+										<li class="page-item active">
+											<a class="page-link" href="javascript:void(0);">1</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="javascript:void(0);">2</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="javascript:void(0);">3</a>
+										</li>
+										<li class="page-item page-next">
+											<a class="page-link" href="javascript:void(0);">Prochaine</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>{% endblock %}

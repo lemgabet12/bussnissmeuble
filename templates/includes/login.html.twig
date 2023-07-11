@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+{% block body%}
+{{ include('includes/sliders.html.twig') }}
+<section class="sptb-sm" style="padding-top: 0.1rem;">
+			<div class="container customerpage">
+				<div class="row">
+					<div class="single-page" >
+						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+							<div class="wrapper wrapper2 card-body">
+								<form  tabindex="500" method="post">
+								
+	
+									<h3 class="font-weight-semibold2">se connecter</h3>
+									<div class="mail">
+										<label>E-mail ou nom d'utilisateur
+										</label>
+										<input type="email" name="email" placeholder="Email"
+                autocomplete="email" 
+                required 
+                autofocus  >
+									</div>
+									<div class="passwd">
+										<label>Mot de passe
+										</label>
+										<input type="password" name="password" id="inputPassword" autocomplete="current-password" 
+                placeholder="Password"
+                required >
+									</div>
+									 <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+									<div class="form-group row justify-content-end">
+										<div class="col-md-9">
+											<label class="custom-control form-checkbox">
+												<input type="checkbox" class="custom-control-input" />
+												<span class="custom-control-label text-dark">Souviens-toi</span>
+											</label>
+										</div>
+									</div>
+									<div class="submit">
+										<button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Connexion</button>
+									</div>
+									<p class="mb-2"><a href="#" >Mot de passe oublié
+									</a></p>
+									<p class="text-dark mb-0">Vous n'avez pas de compte ?
+										<a href="{{path('app_register')}}" class="text-primary ms-1 d-inline-block">
+											S'inscrire</a></p>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        {% endblock %}

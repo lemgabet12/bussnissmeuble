@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Description" content="Shifto - Bootstrap Html rent template. This template includes 10 different types of Rent Listing home pages with 10 Color Themes and 82+ HTML pages. It also inculdes 2 types of menus styles (Left Menu & Horizontal Menu).It has 50+ Plugins, Date Picker, this shifto also includes different styles of list pages, detail pages, multiple widges and multiple color themes.">
+		<meta content="Spruko Technologies Private Limited" name="author">
+		<meta name="keywords" content="real estate, website template, html5 template, html css, apartment website template, best real estate templates,  real estate listing website template, bootstrap real estate,  bootstrap 5 real estate template, property listing website template, real estate site template, real estate dashboard templates, real estate website design templates,  real estate company website templates, html template real estate"/>
+
+		<!-- Favicon -->
+		<link href="{{asset('../assets/images/brand/favicon.png')}}" rel="icon">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Title -->
+		<title> {% block title%}Business meuble{% endblock %}</title>
+        <link href= "{{asset('../assets/images/brand/favicon.png')}}" rel="icon">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		
+{%  block stylesheet %}
+
+
+  
+		<!-- Back to top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+			<link id="style" href="{{asset('../assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+<!-- Font-awesome  Css -->
+		<link href="{{asset('assets/css/icons.css')}}" rel="stylesheet"/>
+		<!-- Style Css -->
+		<link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
+		<link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" />
+		<link href="{{asset('assets/css/color.css')}}" rel="stylesheet" />
+		
+		<!-- Bootstrap Css -->
+	
+
+    </head>
+        
+   
+
+
+		{{ include('includes/header.html.twig') }}
+		
+		{% block body %}
+		<body class="main-body">
+		 {% endblock %}
+		{{ include('includes/footer.html.twig') }}
+		{{ include('includes/section4.html.twig') }}
+
+		{% block javascript %} 
+		          <script src="{{asset('assets/js/js.js')}}"></script>
+		<!-- Back to top -->
+		<a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+		<!-- JQuery js-->
+		<script src="{{asset('../assets/js/jquery.min.js')}}"></script>
+		<!-- Bootstrap js -->
+		<script src="{{asset('../assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+		<script src="{{asset('../assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+
+		<!--JQuery Sparkline Js-->
+		<script src="{{asset('../assets/js/jquery.sparkline.min.js')}}"></script>
+
+		<!-- Circle Progress Js-->
+		<script src="{{asset('../assets/js/circle-progress.min.js')}}"></script>
+
+		<!-- Star Rating-2 Js-->
+		<script src="{{asset('../assets/plugins/ratings-2/jquery.star-rating.js')}}"></script>
+		<script src="{{asset('../assets/plugins/ratings-2/star-rating.js')}}"></script>
+
+		<!--Owl Carousel js -->
+		<script  src="{{asset('../assets/plugins/owl-carousel/owl.carousel.js')}}"></script>
+
+		<!--Horizontal Menu-->
+		<script src="{{asset('../assets/plugins/horizontal-menu/horizontal.js')}}"></script>
+
+		<!-- Internal::Counters -->
+		<script src="{{asset('../assets/plugins/counters/counterup.min.js')}}"></script>
+		<script src="{{asset('../assets/plugins/counters/waypoints.min.js')}}"></script>
+		<script src="{{asset('../assets/plugins/counters/numeric-counter.js')}}"></script>
+
+		<!-- JQuery TouchSwipe js -->
+		<script src="{{asset('../assets/js/jquery.touchSwipe.min.js')}}"></script>
+
+		<!--Select2 js -->
+		<script src="{{asset('../assets/plugins/select2/select2.full.min.js')}}"></script>
+		<script src="{{asset('../assets/js/select2.js')}}"></script>
+
+		<!-- Sticky Js -->
+		<script src= "{{asset('../assets/js/sticky.js')}}"></script>
+
+		<!-- Mobile Sticky Js -->
+		<script src= "{{asset('../assets/js/sticky-mobile.js')}}"></script>
+
+		<!-- Waves Js-->
+		<script src="{{asset('../assets/js/waves.js' )}}"></script>
+
+		
+
+		<!-- P-scroll bar Js-->
+		<script src= "{{asset('../assets/plugins/pscrollbar/pscrollbar.js')}}"></script>
+
+		<!-- Internal:: Jquery flexdatalist js -->
+		<script src=" {{asset('../assets/plugins/jquery.flexdatalist/jquery.flexdatalist.js')}}"></script>
+		<script src=" {{asset('../assets/plugins/jquery.flexdatalist/data-list.js')}}"></script>
+
+		<!-- Swipe Js-->
+		<script src="{{asset('../assets/js/swipe.js')}}"></script>
+
+		<!-- Owl Carousel Js-->
+		<script src="{{asset('../assets/js/owl-carousel.js')}}"></script>
+
+		<!-- Theme color Js-->
+		<script src="{{asset('../assets/js/themeColors.js')}}"></script>
+
+		<!-- Switcher Styles Js-->
+		<script src="{{asset('../assets/js/switcher-styles.js')}}"></script>
+
+		<!-- Custom Js-->
+		<script src="{{asset('../assets/js/custom.js')}}"></script>
+	<script src="{{asset('../assets/js/js.js')}}"></script>
+
+
+		{% endblock %}
+		{% endblock %}
+    </body>
+</html>

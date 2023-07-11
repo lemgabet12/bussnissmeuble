@@ -1,0 +1,329 @@
+<div class="container">
+		<div class="section-title">
+			
+			<h2>Tout<span class="font-weight-semibold2"> les</span> Annonces</h2>
+			
+		</div>
+		<div class="row">
+
+			<div class="col-md-12">
+				<div class="items-gallery">
+					<div class="items-blog-tab">
+						<div class="items-blog-tab-heading">
+							
+						</div>
+						<div class="tab-content p-0">
+								
+											
+										
+							<div class="tab-pane active" id="tab-1">
+								<div class="row" id="container3">
+								{% echo  annonces|length  %}
+								{% for annonce in annonces %}
+								
+								{% if annonce.etatannonce == 'public' %}
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card overflow-hidden">
+										
+											<div class="item-card8-img">
+											
+											
+												<a href="Détails-annonce.html"></a>
+												<img src=" {{annonce.couverture}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-secondary mb-0 text-white fs-12 font-weight-semibold mb-0">{{annonce.statut}}</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">{{annonce.couverture | date('d-m-Y')}}</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">{{annonce.title}}</h5></a>
+													<p class="mb-3 mt-2">Dimensions: 120*190 cm /
+														Matière :Tissu Acier 
+														
+													</p>
+													<div class="h3 mb-0 text-default font-weight-bold">{{annonce.prix}} <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									{% endif %}
+								{% endfor %} 
+								</div>
+								
+							</div>
+							<div class="tab-pane" id="tab-2">
+								<div class="row">
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/f1.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">16/04/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">CHAISE SECRÉTAIRE</h5></a>
+													<p class="mb-3 mt-2">Chaise de bureau distinctif et luxueux -
+														 une touche </p>
+													<div class="h3 mb-0 text-default font-weight-bold">2400 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/j2.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">13/06/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Buffet EFFIE scandinave </h5></a>
+													<p class="mb-3 mt-2">Largeur : 140cm
+											        / Hauteur :70cm / Couleur : Blanc et Gris </p>
+													<div class="h3 mb-0 text-default font-weight-bold">654 <span class="fs-14 font-weight-normal">/DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src="{{asset('../assets/images/products/j3.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-warning mb-0 text-white fs-12 font-weight-semibold mb-0">The Master</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">21/07/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Table Cuisine</h5></a>
+													<p class="mb-3 mt-2">table de la salle à manger est un meuble qui réunit famille et amis.</p>
+													<div class="h3 mb-0 text-default font-weight-bold">1450 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-3">
+								<div class="row">
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/b1.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">06/03/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">LIT MARKOS</h5></a>
+													<p class="mb-3 mt-2">positions et dimensions / Couleur : Gris / Tissu : AR	</p>
+													<div class="h3 mb-0 text-default font-weight-bold">1400 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src=" {{asset('../assets/images/products/b2.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">05/08/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Chaise De Bureau 	</h5></a>
+													<p class="mb-3 mt-2">Matériaux: Plastique, Tissu /
+														Chaise de bureau moderne à haut </p>
+													<div class="h3 mb-0 text-default font-weight-bold">780 <span class="fs-14 font-weight-normal">/DT</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-lg-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/j1.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">05/08/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Chaise De Bureau 	</h5></a>
+													<p class="mb-3 mt-2">Matériaux: Plastique, Tissu /
+														Chaise de bureau moderne à haut </p>
+													<div class="h3 mb-0 text-default font-weight-bold">780 <span class="fs-14 font-weight-normal">/DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-4">
+								<div class="row">
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/h4.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">19/05/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Table Cuisine</h5></a>
+													<p class="mb-3 mt-2">table de la salle à manger est un meuble qui réunit famille et amis.</p>
+													<div class="h3 mb-0 text-default font-weight-bold">421 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/h2.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-danger mb-0 text-white fs-12 font-weight-semibold mb-0">UNTB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">21/05/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Balançoire BULLE</h5></a>
+													<p class="mb-3 mt-2">Capacité de charge : 120 kg maximum
+												</p>
+													<div class="h3 mb-0 text-default font-weight-bold">427 <span class="fs-14 font-weight-normal">/DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src=" {{asset('../assets/images/products/h3.jpg')}} " alt="img" class="cover-image">
+											</div>
+											
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">20/09/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Cuisine linéaire </h5></a>
+													<p class="mb-3 mt-2">Type de cuisine : Cuisine Linéaire 
+														Hauteur élément mural : 220 cm</p>
+													<div class="h3 mb-0 text-default font-weight-bold">3540 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-5">
+								<div class="row">
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/f4.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">19/05/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Table Cuisine</h5></a>
+													<p class="mb-3 mt-2">table de la salle à manger est un meuble qui réunit famille et amis.</p>
+													<div class="h3 mb-0 text-default font-weight-bold">421 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-xl-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/f3.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-success mb-0 text-white fs-12 font-weight-semibold mb-0">SOTEB</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">16/04/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">CHAISE SECRÉTAIRE</h5></a>
+													<p class="mb-3 mt-2">Chaise de bureau distinctif et luxueux -
+														 une touche </p>
+													<div class="h3 mb-0 text-default font-weight-bold">2400 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6">
+										<div class="card mb-0 overflow-hidden">
+											<div class="item-card8-img">
+												<a href="Détails-annonce.html"></a>
+												<img src= "{{asset('../assets/images/products/f2.jpg')}}" alt="img" class="cover-image">
+											</div>
+											
+											<div class="item-card8-overlaytext">
+												<h6 class="bg-warning mb-0 text-white fs-12 font-weight-semibold mb-0">The Master</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-1 fs-12">21/07/2022</p>
+													<a href="Détails-annonce.html"><h5 class="font-weight-semibold2">Table Cuisine</h5></a>
+													<p class="mb-3 mt-2">table de la salle à manger est un meuble qui réunit famille et amis.</p>
+													<div class="h3 mb-0 text-default font-weight-bold">1450 <span class="fs-14 font-weight-normal">/ DT</span></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

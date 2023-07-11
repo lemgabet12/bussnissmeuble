@@ -1,0 +1,389 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{annonce.title}} {% endblock %}
+{% block body %}
+
+<section class="sptb-sm relative" style="padding-top: 0.1rem;">
+			<div class="container">
+				<div class="img-absolute-top"><img src="../assets/images/banners/bg4.png" alt="img"></div>
+				<div class="row">
+                
+                    
+                
+	
+					<!--Right Side Content-->
+					<div class="col-xl-4 col-lg-4 col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h3 class="card-title">Posté par</h3>
+							</div>
+							<div class="card-body  item-user">
+								<div class="profile-pic mb-0">
+									<a href="Fiche-Showroom.html"> 	<img src="../assets/images/products/products/b3.png" class="brround" alt="user">
+									<div class="">
+									
+									</a>
+										<div>
+											<a href="Showroom.html" class="btn btn-primary waves-effect waves-light mt-5">Voir toutes les propriétés</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body item-user">
+								<h4 class="mb-4 fs-18 font-weight-semibold2">Contact SOTEB	</h4>
+								<div>
+									<h6><span class="font-weight-semibold"><i class="fe fe-map-pin me-2 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body"> tunis</a></h6>
+									<h6><span class="font-weight-semibold"><i class="fe fe-mail me-2 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body"> email@gmail.com</a></h6>
+									<h6><span class="font-weight-semibold"><i class="fe fe-phone me-2 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body"> 00 000 000</a></h6>
+									<h6><span class="font-weight-semibold"><i class="fe fe-link me-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body">http://example.com/</a></h6>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="text-start">
+									
+									<a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light my-1" data-bs-toggle="modal" data-bs-target="#contact"><i class="fe fe-user"></i> Contactez SOTEB </a>
+									<a href="javascript:void(0);" class="btn btn-info waves-effect waves-light my-1"><i class="fe fe-share-2"></i> Partager</a>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="card-header">
+								<h3 class="card-title">Localisation </h3>
+							</div>
+							<div class="card-body">
+								<div class="map-header">
+									<div class="map-header-layer" id="map2"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card mt-5">
+							<div class="card-body">
+								<h4 class="font-weight-semibold2">Besoin d'aide pour tous les détails ?</h4>
+								<div class="support-service bg-light br-7 mt-4">
+									<i class="fe fe-phone bg-primary text-white fs-16"></i>
+									<h6 class="text-default font-weight-semibold2 fs-16 mt-1 mb-1">+00 00 000 000</h6>
+									<p class="text-default mb-0 fs-12 text-uppercase">Business Meubles</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Right Side Content-->
+
+					<div class="col-xl-8 col-lg-8 col-md-12">
+                        
+						<!--Add Description-->
+						<div class="card overflow-hidden">
+						
+							<div class="card-body">
+								<div class="item-det mb-4">
+									<a href="javascript:void(0);" class="text-dark"><h3 class="font-weight-semibold2">{{annonce.title}} </h3></a>
+									<div class="d-flex align-items-center">
+										<ul class="d-flex">
+											<li class="me-5"><a href="javascript:void(0);" class="icons"><i class="fe fe-home text-muted me-1 absolute-link"></i> Showroom</a></li>
+											<li class="me-5"><a href="javascript:void(0);" class="icons"><i class="fe fe-map-pin text-muted me-1 absolute-link"></i> {{annonce.villeId.nom}}</a></li>
+											<li class="me-5"><a href="javascript:void(0);" class="icons"><i class="fe fe-calendar text-muted me-1 absolute-link"></i> {{annonce.datecreation | date('d-m-Y')}}</a></li>
+											<li class="me-5"><a href="javascript:void(0);" class="icons"><i class="fe fe-eye text-muted me-1 absolute-link"></i> 765</a></li>
+										</ul>
+										<div class=" d-inline-flex align-items-center">
+											<div class="rating-star sm block my-rating-5 me-2 mb-1" data-stars="4s">
+											</div> 4.5
+										</div>
+									</div>
+								</div>
+								<div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-loop="false"
+									data-bs-wrap="false" data-bs-play="true" data-bs-thumb="true" data-bs-touch="true">
+									<div class="carousel-inner slide-show-image">
+										<div class="carousel-item active"> <img loading="lazy"	src="{{asset('uploads/images/products/'~annonce.couverture)}}" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/2.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/3.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/4.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/5.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/1.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/2.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/3.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/4.jpg" alt="img"> </div>
+										<div class="carousel-item"> <img loading="lazy"	src="../assets/images/products/products/modal/5.jpg" alt="img"> </div>
+										<a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round"
+												class="primoslider-icon primoslider-chevron-left">
+												<polyline points="15 18 9 12 15 6"></polyline>
+											</svg>
+										</a>
+										<a class="carousel-control-next" href="#carousel" role="button"	data-bs-slide="next">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round"
+												class="primoslider-icon primoslider-chevron-right">
+												<polyline points="9 18 15 12 9 6"></polyline>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-4">
+								<div class="item-card9-footer">
+									<div class="item-card9-cost row w-100">
+										
+										<div class="col-md-4 col-sm-6 my-2 border-end mx-auto text-center">
+											<div class="d-inline-flex text-start">
+												<i class="fa-regular fa-money-bill"></i>
+												<div class="ms-3">
+													<h6 class="fs-13 font-weight-semibold">PRIX</h6>
+													<h5 class="mb-0 font-weight-bold">{{annonce.prix}} / DT</h5>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mb-4 overflow-hidden">
+							<div class="details-tab">
+								<div class="border-0">
+									<div class="wideget-user-tab wideget-user-tab3">
+										<div class="tab-menu-heading">
+											<div class="tabs-menu1">
+												<ul class="nav">
+													<li class=""><a href="#tab-1" class="active" data-bs-toggle="tab"><i class="fe fe-user me-1 absolute-link"></i> Description</a></li>
+													<li><a href="#tab-2" data-bs-toggle="tab"><i class="fe fe-video me-1 absolute-link"></i> Vidéo</a></li>
+													<li><a href="#tab-3" data-bs-toggle="tab"><i class="fe fe-list me-1 absolute-link"></i> Caractéristiques</a></li>
+												
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content border border-bottom-0 p-5 bg-white br-te-5">
+										<div class="tab-pane active" id="tab-1">
+											<h3 class="card-title mb-3 font-weight-semibold2">Description</h3>
+											<div class="mb-0">
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+											</div>
+											<h4 class="card-title mt-6 mb-3 font-weight-semibold2"> Informations de contact	</h4>
+											<div class="item-user mt-3">
+												<div class="row">
+													<div class="col-md-6">
+														<h6 class="font-weight-normal"><span><i class="fe fe-map me-3 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body"> Tunis</a></h6>
+														<h6 class="font-weight-normal"><span><i class="fe fe-mail me-3 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-body"> example@gmail.com</a></h6>
+													</div>
+													<div class="col-md-6">
+														<h6 class="font-weight-normal"><span><i class="fe fe-phone me-3 mb-2 d-inline-block"></i></span><a href="javascript:void(0);" class="text-secondary"> 00 000 000</a></h6>
+														<h6 class="font-weight-normal"><span><i class="fe fe-link me-3 d-inline-block"></i></span><a href="javascript:void(0);" class="text-secondary">https://example.com/</a></h6>
+													</div>
+												</div>
+											</div>
+											<h4 class="card-title mt-6 mb-3 font-weight-semibold2">Plus d'informations sur l'entreprise	</h4>
+											<div class="table-responsive">
+												<table class="table mb-0 table-bordered-0">
+													<tbody>
+														<tr>
+															<td class="font-weight-semibold px-0">Année établie	</td>
+															<td class="px-0">1981</td>
+														</tr>
+														<tr>
+															<td class="font-weight-semibold px-0">Livraison</td>
+															<td class="px-0"> à domicile</td>
+														</tr>
+														<tr>
+															<td class="font-weight-semibold px-0">méthodes de payement	</td>
+															<td class="px-0">Paiement sécurisés</td>
+														</tr>
+														<tr>
+															<td class="font-weight-semibold px-0">Fax</td>
+															<td class="px-0">+25 485-9865-85</td>
+														</tr>
+														
+														<tr>
+															<td class="font-weight-semibold px-0">Certificat</td>
+															<td class="px-0">ISO 9000</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="tab-pane" id="tab-2">
+											<ul class="list-unstyled video-list-thumbs">
+												<li class="mb-0">
+													<iframe class="w-100"  height="400" src="https://www.youtube.com/embed/kacyaEXqVhs"  allow="accelerometer; autoplay;" allowfullscreen></iframe>
+												</li>
+											</ul>
+										</div>
+										<div class="tab-pane" id="tab-3">
+											<h4 class="card-title mb-3 font-weight-semibold2">Caractéristiques	</h4>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="table-responsive">
+														<table class="table row table-borderless w-100 m-0 text-nowrap ">
+															<tbody class="col-lg-12 col-xl-6 p-0">
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold"> Catégorie:</span> MEUBLES SALON</td>
+																</tr>
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold">Largeur :</span>  220cm
+																	</td>
+																</tr>
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold">Profondeur : </span>95 cm</td>
+																</tr>
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold">Assise :</span>  43 cm</td>
+																</tr>
+															</tbody>
+															<tbody class="col-lg-12 col-xl-6 p-0">
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold">Tissu : </span> toile</td>
+																</tr>
+																<tr>
+																	<td class="px-0"><span class="font-weight-semibold">Prix: </span> 5400 DT</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+									<div class="pt-4 pb-4 px-5 border border-bottom-0 bg-white">
+										<div class="list-id">
+											<div class="row">
+												<div class="col">
+													<a class="mb-0">Référence : #8256358</a>
+												</div>
+												<div class="col col-auto">
+													Publié par <a class="mb-0 font-weight-bold">SOTEB</a> / 21 décembre 2021
+												</div>
+											</div>
+										</div> 
+
+									</div>
+									<div class="card-footer bg-white border">
+										<div class="icons">
+											<a href="javascript:void(0);" class="btn btn-primary px-5">  Reserve maintenant	</a>
+											<a href="javascript:void(0);" class="btn btn-light icons"><i class="fe fe-share-2 fs-16 leading-normal"></i></a>
+											<a href="javascript:void(0);" class="btn btn-light icons"><i class="fe fe-printer fs-16 leading-normal"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="mt-6 mb-4 fs-18 font-weight-semibold2">Articles Similaires</h3>
+						<div class="owl-carousel owl-carousel-icons3 owl-loaded owl-drag">
+							<div class="item">
+								<div class="card mb-0 overflow-hidden">
+									<div class="item-card2-img m-0">
+										<a href="Détails-annonce.html"></a>
+										<img src="../assets/images/products/f1.jpg" alt="img" class="cover-image">
+									
+									</div>
+									
+									<div class="card-body">
+										<div class="item-card2">
+											<div class="item-card2-text">
+												<h5 >8758 DT <span class="fs-12  font-weight-normal">Prix</span></h5>
+												<a href="Détails-annonce.html" class="text-dark"><h4 class="fs-16 font-weight-semibold2"> Fauteuil convertible</h4></a>
+												<p class="text-muted mb-0">Dimensions: 120*190 cm / Matière :Tissu Acier</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card mb-0 overflow-hidden">
+									<div class="item-card2-img m-0">
+										<a href="Détails-annonce.html"></a>
+										<img src="../assets/images/products/j3.jpg" alt="img" class="cover-image">
+									
+									</div>
+									
+									<div class="card-body">
+										<div class="item-card2">
+											<div class="item-card2-text">
+												<h5 >8758 DT <span class="fs-12  font-weight-normal">Prix</span></h5>
+												<a href="Détails-annonce.html" class="text-dark"><h4 class="fs-16 font-weight-semibold2"> Fauteuil convertible</h4></a>
+												<p class="text-muted mb-0">Dimensions: 120*190 cm / Matière :Tissu Acier</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+								
+							
+							<div class="item">
+								<div class="card mb-0 overflow-hidden">
+									<div class="item-card2-img m-0">
+										<a href="Détails-annonce.html"></a>
+										<img src="../assets/images/products/f1.jpg" alt="img" class="cover-image">
+									
+									</div>
+									
+									<div class="card-body">
+										<div class="item-card2">
+											<div class="item-card2-text">
+												<h5 >8758 DT <span class="fs-12  font-weight-normal">Prix</span></h5>
+												<a href="Détails-annonce.html" class="text-dark"><h4 class="fs-16 font-weight-semibold2"> Fauteuil convertible</h4></a>
+												<p class="text-muted mb-0">Dimensions: 120*190 cm / Matière :Tissu Acier</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card mb-0 overflow-hidden">
+									<div class="item-card2-img m-0">
+										<a href="Détails-annonce.html"></a>
+										<img src="../assets/images/products/j3.jpg" alt="img" class="cover-image">
+									
+									</div>
+									
+									<div class="card-body">
+										<div class="item-card2">
+											<div class="item-card2-text">
+												<h5 >8758 DT <span class="fs-12  font-weight-normal">Prix</span></h5>
+												<a href="Détails-annonce.html" class="text-dark"><h4 class="fs-16 font-weight-semibold2"> Fauteuil convertible</h4></a>
+												<p class="text-muted mb-0">Dimensions: 120*190 cm / Matière :Tissu Acier</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="card mb-0 overflow-hidden">
+									<div class="item-card2-img m-0">
+										<a href="Détails-annonce.html"></a>
+										<img src="../assets/images/products/f1.jpg" alt="img" class="cover-image">
+									
+									</div>
+									
+									<div class="card-body">
+										<div class="item-card2">
+											<div class="item-card2-text">
+												<h5 >8758 DT <span class="fs-12  font-weight-normal">Prix</span></h5>
+												<a href="Détails-annonce.html" class="text-dark"><h4 class="fs-16 font-weight-semibold2"> Fauteuil convertible</h4></a>
+												<p class="text-muted mb-0">Dimensions: 120*190 cm / Matière :Tissu Acier</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                    
+                    
+                    </div>
+						
+					
+				</div>
+			</div>
+		</section>
+{% endblock %}

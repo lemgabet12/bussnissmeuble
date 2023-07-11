@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block body %} 
+<section class="sptb-sm" style="padding-top: 0.1rem;">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-4 col-md-12">
+                <div class="card">	<a href="Showroom.html">
+                <fom method="POST">
+                    <div class="card-header">
+                        <h3 class="card-title">Meilleur Partenaire</h3>
+                    </div>
+                    <div class="card-body pb-2">
+                        <ul class="list-unstyled widget-spec vertical-scroll mb-0">
+                            <li>
+                                <img src=" {{ asset('../assets/images/products/products/h2.jpg')}}" alt="img" class="cover-image">
+                            </li>
+                            <li>
+                                <img src=" {{asset('../assets/images/products/products/b3.png')}}" alt="img" class="cover-image">
+                            </li>
+                            
+                            <li>
+                                <img src=" {{asset('../assets/images/products/products/b2.png')}}" alt="img" class="cover-image">
+                            </li>
+                            
+                            <li>
+                                <img src=" {{asset('../assets/images/products/products/h3.jpg')}}" alt="img" class="cover-image">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </a>
+                
+            </div>
+           <div class="col-xl-6 col-lg-7 col-md-7">
+						<div class="card mb-0">
+							<div class="card-header">
+								<h3 class="card-title">Ajouter Annonce</h3>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									
+									{{form(form)}}
+									
+									
+								</div>
+								
+								
+							</div>
+							
+						</div>
+			</div>
+                
+            
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Modifier Annonce
+{% endblock %}
+{% block body %}
+{{ include('profil/profil.html.twig') }}
+ <div class=" col-lg-9 col-md-12">
+						<div class="card mb-0">
+							<div class="card-header">
+								<h3 class="card-title">Modifer Annonce</h3>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									
+									{{form(form)}}
+									
+									
+								</div>
+								
+								
+							</div>
+							
+						</div>
+			</div>
+
+{% endblock %}

@@ -1,0 +1,183 @@
+<div id="global-loader">
+			<div class="loader-img">
+				<a href="{{path('home')}}"> <img src= "{{asset('../assets/images/brand/favicon.png')}}" alt="" class="loader-logo-image"></a>
+			</div>
+		</div>
+        <div class="header-main">
+			<div class="top-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-8 col-lg-8 col-sm-4 col-7">
+							<div class="top-bar-start d-flex">
+								<div class="clearfix">
+									<ul class="socials">
+										<li>
+											<a class="social-icon text-muted" href="javascript:void(0);">
+												<i class="fe fe-facebook" style=" font-size: 18px;"></i></a>
+										</li>
+										<li>
+											<a class="social-icon text-muted" href="javascript:void(0);"> 
+												<i class="fe fe-instagram" style=" font-size: 18px;"></i></a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-sm-8 col-5">
+							<div class="top-bar-end">
+								<ul class="custom">
+									
+									<li>
+									
+										<a href="{{ path('login')}}" class="text-muted"><i class="fe fe-log-out me-1"style=" font-size: 18px;">
+										</i> <span>Se Connecter</span></a>
+									</li>
+									{% if app.user %}
+										<li class="dropdown">
+										<a href="javascript:void(0);" class="text-muted" data-bs-toggle="dropdown">
+											<i class="fe fe-home me-1"style=" font-size: 18px;"></i><span> Mon Compte</span></a>
+										<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+											<a href="{{path('mydach')}}" class="dropdown-item" >
+												<i class="dropdown-icon fe fe-user"></i> Mon profil
+											</a>
+											
+											<a href="{{path('mydach')}}" class="dropdown-item" >
+												<i class="dropdown-icon fe fe-settings"></i> Paramètres du compte
+
+											</a>
+											<a href="{{ app.user ? 'logout' : 'login'}}"  class="dropdown-item" href="javascript:void(0);">
+												<i class="dropdown-icon fe fe-log-out"></i> Se Déconnecter
+											</a>
+										</div>
+									</li>
+									{% endif %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Header -->
+			<div class="sticky">
+				<div class="horizontal-header clearfix">
+					<div class="container">
+						<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
+						<a href="{{path ('home')}}"><span class="smllogo">
+							<img src=" {{asset('../assets/images/brand/logo.png')}}" alt="" class="header-dark header-brand-img1">
+							<img src=" {{asset('../assets/images/brand/logo-white.png')}}" alt="" class="header-white header-brand-img1">
+						</span></a>
+						<a href="tel:245-6325-3256" class="callusbtn"><i class="fa fa-phone" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /Header -->
+
+			<div class="horizontal-main bg-dark-transparent clearfix py-2">
+				<div class="horizontal-mainwrapper container clearfix px-3">
+					<div class="desktoplogo">
+						<a href="{{path ('home')}}">
+							<img src=" {{asset('../assets/images/brand/logo-white.png')}}" alt="">
+						</a>
+					</div>
+					<div class="desktoplogo-1">
+						<a href="{{asset('home')}}">
+							<img src= "{{asset('../assets/images/brand/logo.png')}}" alt="" class="header-dark">
+							<img src= "{{asset('../assets/images/brand/logo-white.png')}}" alt="" class="header-white">
+						</a>
+					</div>
+					<!--Nav-->
+					<nav class="horizontalMenu clearfix d-md-flex">
+						<ul class="horizontalMenu-list">
+							
+							
+							</li>
+							
+							<li><a href="{{path('showroom')}}">Showroom </a></li>
+							
+							
+							<li><a href="{{ path('categorie')}}"> Catégories  <span class="fe fe-chevron-down m-0"></span></a>
+								<div class="horizontal-megamenu clearfix">
+									<div class="container">
+										<div class="megamenu-content">
+											<div class="row">
+												<ul class="col link-list">
+
+
+													<li class="title">MEUBLES SALON</li>
+													<li><a href="liste-d'annonces.html">Meuble TV</a></li>
+													<li><a href="liste-d'annonces.html">Étagère et Rangement</a></li>
+													<li><a href="liste-d'annonces.html">Porte chaussures </a></li>
+													<li><a href="liste-d'annonces.html">Table</a></li>
+													<li><a href="liste-d'annonces.html">Salon</a></li>
+													<li><a href="liste-d'annonces.html">Meubles d'entrée</a></li>	
+											       <li><a href="liste-d'annonces.html"> Fauteuils </a></li>
+													<li><a href="liste-d'annonces.html"> Poufs  </a></li>
+													<li><a href="liste-d'annonces.html"> Canapé</a></li>
+													<li><a href="liste-d'annonces.html"> Canapé droit  </a></li>
+													<li><a href="liste-d'annonces.html"> Canapé d'angle</a></li>
+													</ul>
+
+												<ul class="col link-list">
+													<li class="title">	MEUBLE DE CHAMBRE</li>
+													<li><a href="liste-d'annonces.html">Chambre Adulte</a></li>
+													<li><a href="liste-d'annonces.html"> Chambre enfant </a></li>
+													<li><a href="liste-d'annonces.html">Placard et dressing</a></li>
+													<li><a href="liste-d'annonces.html"> Commode </a></li>
+													<li><a href="liste-d'annonces.html"> Lit Adulte </a></li>
+													<li><a href="liste-d'annonces.html"> Coiffeuse</a></li>
+													<li><a href="liste-d'annonces.html"> lit enfant</a></li>
+													
+												
+													<li><a href="liste-d'annonces.html"> Chaise enfant</a></li>
+													<li><a href="liste-d'annonces.html"> Armoire </a></li> 
+												</ul>
+											
+											
+												<ul class="col link-list">
+													<li class="title"> CUISINE & SALLE DE BAIN</li>
+													<li><a href="liste-d'annonces.html"> Buffet Tables </a></li>
+													<li><a href="liste-d'annonces.html"> Chaises Cuisine</a></li>
+													<li><a href="liste-d'annonces.html">  Cuisine complète</a></li>
+													
+													<li><a href="liste-d'annonces.html">Elément cuisine</a></li>
+													<li><a href="liste-d'annonces.html">Rangements cuisine</a></li>
+													
+													<li><a href="liste-d'annonces.html">Rangement salle de bain</a></li>
+
+													
+													<li><a href="liste-d'annonces.html">Linge de bain</a></li>
+													
+													
+												</ul>
+												
+											
+												<ul class="col link-list">
+													<li class="title">MEUBLES JARDIN</li>
+													<li><a href="liste-d'annonces.html">Salon jardin</a></li>
+													<li><a href="liste-d'annonces.html">Chaises et bancs</a></li>
+													
+													<li><a href="liste-d'annonces.html">Accessoires extérieur</a></li>
+												</ul>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+							<li><a href="{{path('contact')}}"> Contact <span class="hmarrow"></span></a></li>
+							<li class="mt-4 pb-0 mt-lg-0">
+							
+								{% if app.user %}
+									<a  href="{{path('addannonce')}}">Publier une Annonce</a>
+								{% endif %}
+								
+							</li>
+						</ul>
+					</nav>
+				
+				</div>
+			</div>
+		</div>
